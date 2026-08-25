@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: white;
+}
+.topBar {
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 1rem;
+
+    background-color: #1f2937;
+    border-bottom: 1px solid #374151;
+}
+
+.topBar__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.topBar__logo {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    object-fit: contain;
+}
+
+.topBar__title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.mainNav {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 2rem);
+    max-width: 24rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0.6rem;
+
+    background: rgba(31, 41, 55, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.3);
+
+    z-index: 100;
+}
+.mainNav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.15rem;
+
+    min-width: 4rem;
+
+    padding: 0.5rem 0.75rem;
+
+    color: #9ca3af;
+
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.mainNav__icon {
+    font-size: 1.2rem;
+}
+
+.mainNav__link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+
+    .topBar {
+        height: 4.5rem;
+        padding: 0 2rem;
+    }
+
+    .topBar__logo {      
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .topBar__title {
+        font-size: 1.2rem;
+    }
+
+    .mainNav {
+        width: min(90%, 30rem);
+        padding: 0.75rem;
+    }
+
+    .mainNav__link {
+        min-width: 5rem;
+        padding: 0.6rem 1rem;
+
+        font-size: 0.9rem;
+    }
+
+    .mainNav__icon {
+
+        font-size: 1.4rem;
+    }
+}

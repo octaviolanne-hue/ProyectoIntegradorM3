@@ -4,13 +4,35 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles.css" />
-        <title>Chat con tu personaje favorito</title>
+        <title>Character AI</title>
     </head>
+    <header class="topBar">
+        <div class="topBar__brand">
+            <img 
+                class="topBar__logo" 
+                src="../assets/icon.png" 
+                alt="Character Chat"
+            >
+
+            <span class="topBar__title">
+                Character Chat
+            </span>
+        </div>
+    </header>
     <body>
         <nav class="mainNav">
-        <a class="mainNav__link" href="/">Home</a>
-        <a class="mainNav__link" href="/chat">Chat</a>
-        <a class="mainNav__link" href="/about">About</a>
+            <a class="mainNav__link" href="/">
+                <span class="mainNav__icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a class="mainNav__link" href="/chat">
+                <span class="mainNav__icon">💬</span>
+                <span>Chat</span>
+            </a>
+            <a class="mainNav__link" href="/about">
+                <span class="mainNav__icon">ℹ️</span>
+                <span>About</span>
+            </a>
         </nav>
 
         <div id="app"></div>
