@@ -39,7 +39,7 @@ export function renderHome() {
                                 bastante peculiar.
                             </p>
                             <a 
-                                href="/chat"
+                                href="/chat?character=jack"
                                 class="character-card__button"
                             >
                                 💬 Chatear
@@ -64,7 +64,7 @@ export function renderHome() {
                                 una solución para todo.
                             </p>
                             <a 
-                                href="/chat"
+                                href="/chat?character=tony"
                                 class="character-card__button"
                             >
                                 💬 Chatear
@@ -89,7 +89,7 @@ export function renderHome() {
                                 las de la conversación.
                             </p>
                             <a 
-                                href="/chat"
+                                href="/chat?character=deadpool"
                                 class="character-card__button"
                             >
                                 💬 Chatear

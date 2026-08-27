@@ -9,19 +9,15 @@ body {
     background-color: #111827;
     color: white;
 }
-.home {
-    width: 100%;
-    max-width: 70rem;
-    margin: 0 auto;
 
-    padding: 2rem 1rem 7rem;
-}
+/* ========================================
+   TOP BAR
+   ======================================== */
+
 .topBar {
     height: 4rem;
-
     display: flex;
     align-items: center;
-
     padding: 0 1rem;
 
     background-color: #1f2937;
@@ -37,7 +33,6 @@ body {
 .topBar__logo {
     width: 2.25rem;
     height: 2.25rem;
-
     object-fit: contain;
 }
 
@@ -46,10 +41,16 @@ body {
     font-weight: 700;
 }
 
+/* ========================================
+   NAVBAR MOBILE + TABLET
+   ======================================== */
+
 .mainNav {
     position: fixed;
+
     bottom: 1rem;
     left: 50%;
+
     transform: translateX(-50%);
 
     width: calc(100% - 2rem);
@@ -61,7 +62,8 @@ body {
 
     padding: 0.6rem;
 
-    background: rgba(31, 41, 55, 0.50);
+    background: rgba(31, 41, 55, 0.5);
+
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 999px;
 
@@ -72,6 +74,7 @@ body {
 
     z-index: 100;
 }
+
 .mainNav__link {
     display: flex;
     flex-direction: column;
@@ -103,6 +106,24 @@ body {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* ========================================
+   HOME
+   ======================================== */
+
+.home {
+    width: 100%;
+    max-width: 70rem;
+
+    margin: 0 auto;
+
+    /*
+     * Dejamos espacio inferior para que
+     * la navbar fija no tape el contenido.
+     */
+    padding: 2rem 1rem 7rem;
+}
+
 .home__intro {
     text-align: center;
 
@@ -116,7 +137,9 @@ body {
 
     font-size: 0.75rem;
     font-weight: 700;
+
     letter-spacing: 0.15rem;
+
     opacity: 0.6;
 }
 
@@ -130,22 +153,20 @@ body {
 .home__description {
     color: #6b7280;
 }
+
 .characters__title {
     margin-bottom: 1rem;
 
     font-size: 1.25rem;
 }
+
 .characters__grid {
     display: grid;
     gap: 1.25rem;
 }
-.characters__grid {
-    display: grid;
-    gap: 1.25rem;
-}
+
 .character-card__image {
     height: 14rem;
-
     overflow: hidden;
 }
 
@@ -157,6 +178,7 @@ body {
 
     display: block;
 }
+
 .character-card__content {
     padding: 1.25rem;
 }
@@ -172,8 +194,10 @@ body {
 
     color: #6b7280;
 }
+
 .character-card__button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -182,6 +206,7 @@ body {
     padding: 0.7rem 1rem;
 
     background-color: #111827;
+
     color: white;
 
     border-radius: 0.75rem;
@@ -192,12 +217,20 @@ body {
 
     transition: transform 0.2s ease;
 }
+
 .character-card__button:hover {
     transform: translateY(-2px);
 }
+
+/* ========================================
+   ABOUT
+   ======================================== */
+
 .about {
     max-width: 40rem;
+
     margin: 0 auto;
+
     padding: 2rem 1rem 7rem;
 }
 
@@ -211,7 +244,7 @@ body {
 }
 
 .about p {
-    color: #666;
+    color: #9ca3af;
     line-height: 1.6;
 }
 
@@ -222,20 +255,297 @@ body {
 
 .about__characters li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #ddd;
+
+    border-bottom: 1px solid #374151;
 }
 
 .about__characters span {
-    color: #666;
+    color: #9ca3af;
 }
+
+/* ========================================
+   CHAT
+   ======================================== */
+
+.chatApp {
+    display: flex;
+    flex-direction: column;
+
+    /*
+     * Dejamos espacio suficiente para la
+     * navbar fija inferior.
+     */
+    height: calc(100vh - 190px);
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background-color: #1f2937;
+
+    border-radius: 0.75rem;
+
+    overflow: hidden;
+
+    border: 1px solid #374151;
+}
+
+/* ========================================
+   CHAT HEADER
+   ======================================== */
+
+.chatHeader {
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 0.75rem 1rem;
+
+    background-color: #1f2937;
+
+    border-bottom: 1px solid #374151;
+
+    flex-shrink: 0;
+}
+
+.chatHeader__avatar {
+    width: 3rem;
+    height: 3rem;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 2px solid #4b5563;
+}
+
+.chatHeader__avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.chatHeader__info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.15rem;
+}
+
+.chatHeader__name {
+    margin: 0;
+
+    color: #f9fafb;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.chatHeader__status {
+    color: #9ca3af;
+
+    font-size: 0.8rem;
+}
+
+/* ========================================
+   MENSAJES
+   ======================================== */
+
+.chatMessages {
+    flex: 1;
+
+    padding: 1rem;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    background-color: #111827;
+}
+
+.message {
+    max-width: 75%;
+
+    padding: 0.65rem 0.8rem;
+
+    border-radius: 0.75rem;
+
+    font-size: 0.95rem;
+
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
+
+    color: #f9fafb;
+}
+
+.message--character {
+    align-self: flex-start;
+
+    background-color: #374151;
+
+    border-top-left-radius: 0.2rem;
+}
+
+.message--user {
+    align-self: flex-end;
+
+    background-color: #2563eb;
+
+    border-top-right-radius: 0.2rem;
+}
+
+/* ========================================
+   ESCRIBIENDO
+   ======================================== */
+
+.message--typing {
+    color: #d1d5db;
+
+    font-style: italic;
+
+    background-color: #374151;
+}
+
+/* ========================================
+   ERROR
+   ======================================== */
+
+.message--error {
+    align-self: center;
+
+    max-width: 90%;
+
+    background-color: #7f1d1d;
+
+    color: #fef2f2;
+
+    text-align: center;
+}
+
+.message__retry {
+    margin-left: 0.5rem;
+
+    padding: 0.35rem 0.65rem;
+
+    border: 0;
+
+    border-radius: 0.4rem;
+
+    background-color: #22c55e;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* ========================================
+   INPUT
+   ======================================== */
+
+.chatComposer {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.75rem 1rem;
+
+    background-color: #1f2937;
+
+    border-top: 1px solid #374151;
+
+    flex-shrink: 0;
+}
+
+.chatComposer__input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0.7rem 1rem;
+
+    background-color: #374151;
+
+    color: #f9fafb;
+
+    border: 1px solid #4b5563;
+
+    border-radius: 1.5rem;
+
+    font-size: 0.95rem;
+
+    outline: none;
+}
+
+.chatComposer__input::placeholder {
+    color: #9ca3af;
+}
+
+.chatComposer__input:focus {
+    border-color: #60a5fa;
+}
+
+/* ========================================
+   BOTÓN ENVIAR
+   ======================================== */
+
+.chatComposer__send {
+    width: 2.75rem;
+    height: 2.75rem;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+}
+
+.chatComposer__send:hover {
+    background-color: #3b82f6;
+}
+
+.chatComposer__send:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+/* ========================================
+   TABLET
+   768px+
+   ======================================== */
+
 @media (min-width: 768px) {
 
     .topBar {
         height: 4.5rem;
+
         padding: 0 2rem;
     }
 
-    .topBar__logo {      
+    .topBar__logo {
         width: 3rem;
         height: 3rem;
     }
@@ -244,24 +554,31 @@ body {
         font-size: 1.2rem;
     }
 
+    /*
+     * La navbar sigue siendo inferior.
+     * Solo la hacemos un poco más grande.
+     */
+
     .mainNav {
         width: min(90%, 30rem);
+
         padding: 0.75rem;
     }
 
     .mainNav__link {
         min-width: 5rem;
+
         padding: 0.6rem 1rem;
 
         font-size: 0.9rem;
     }
 
     .mainNav__icon {
-
         font-size: 1.4rem;
     }
-        .home {
-        padding: 3rem 2rem 6rem;
+
+    .home {
+        padding: 3rem 2rem 7rem;
     }
 
     .home__intro h2 {
@@ -271,8 +588,85 @@ body {
     .characters__grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /*
+     * Un poco más de espacio para que
+     * la navbar no tape el composer.
+     */
+
+    .chatApp {
+        height: calc(100vh - 200px);
+
+        margin-top: 1.5rem;
+    }
+
+    .chatHeader {
+        padding: 0.85rem 1.25rem;
+    }
+
+    .chatMessages {
+        padding: 1.5rem;
+    }
+
+    .chatComposer {
+        padding: 0.85rem 1.25rem;
+    }
 }
-@media (min-width: 1024px) {
+
+/* ========================================
+   PC
+   1200px+
+   ======================================== */
+
+@media (min-width: 1200px) {
+
+    /*
+     * En PC la navbar deja de ser flotante
+     * y pasa a estar debajo del topBar.
+     */
+
+    .mainNav {
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+        max-width: none;
+
+        padding: 0.5rem;
+
+        background-color: #1f2937;
+
+        border: 0;
+
+        border-bottom: 1px solid #374151;
+
+        border-radius: 0;
+
+        backdrop-filter: none;
+
+        box-shadow: none;
+    }
+
+    .mainNav__link {
+        flex-direction: row;
+
+        min-width: auto;
+
+        padding: 0.5rem 1rem;
+
+        border-radius: 0.5rem;
+
+        gap: 0.4rem;
+    }
+
+    .mainNav__icon {
+        font-size: 1.1rem;
+    }
+
+    /*
+     * HOME PC
+     */
 
     .characters__grid {
         grid-template-columns: repeat(3, 1fr);
@@ -282,4 +676,13 @@ body {
         height: 16rem;
     }
 
+    /*
+     * CHAT PC
+     */
+
+    .chatApp {
+        height: calc(100vh - 150px);
+
+        margin: 1.5rem auto 0;
+    }
 }

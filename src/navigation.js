@@ -1,9 +1,10 @@
 import { router } from "./router.js";
 
 export function navigateTo (path) {
-
+console.log("Navegando a:", path);
     history.pushState(null,"",path);
-
+    console.log("URL después de pushState:", window.location.href);
+    console.log("Search:", window.location.search);
     router();
 }
 export function setupLinkInterception() {
