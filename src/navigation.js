@@ -1,13 +1,12 @@
 import { router } from "./router.js";
 
 export function navigateTo (path) {
+
     history.pushState(null,"",path);
 
     router();
 }
 export function setupLinkInterception() {
-
-    // Escuchar todos los clicks de la aplicación
     document.addEventListener("click", (event) => {
         const link = event.target.closest("a");
 
@@ -16,7 +15,6 @@ export function setupLinkInterception() {
         const href = link.getAttribute("href");
 
         if (!href) return;
-
         if (
             event.metaKey ||
             event.ctrlKey ||
