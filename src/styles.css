@@ -9,6 +9,13 @@ body {
     background-color: #111827;
     color: white;
 }
+.home {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    padding: 2rem 1rem 7rem;
+}
 .topBar {
     height: 4rem;
 
@@ -96,7 +103,131 @@ body {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
 }
+.home__intro {
+    text-align: center;
 
+    max-width: 38rem;
+
+    margin: 0 auto 2.5rem;
+}
+
+.home__eyebrow {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    opacity: 0.6;
+}
+
+.home__intro h2 {
+    margin-bottom: 0.75rem;
+
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.home__description {
+    color: #6b7280;
+}
+.characters__title {
+    margin-bottom: 1rem;
+
+    font-size: 1.25rem;
+}
+.characters__grid {
+    display: grid;
+    gap: 1.25rem;
+}
+.characters__grid {
+    display: grid;
+    gap: 1.25rem;
+}
+.character-card__image {
+    height: 14rem;
+
+    overflow: hidden;
+}
+
+.character-card__image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+.character-card__content {
+    padding: 1.25rem;
+}
+
+.character-card__content h4 {
+    margin-bottom: 0.5rem;
+
+    font-size: 1.4rem;
+}
+
+.character-card__content p {
+    margin-bottom: 1rem;
+
+    color: #6b7280;
+}
+.character-card__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 0.7rem 1rem;
+
+    background-color: #111827;
+    color: white;
+
+    border-radius: 0.75rem;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: transform 0.2s ease;
+}
+.character-card__button:hover {
+    transform: translateY(-2px);
+}
+.about {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 7rem;
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+}
+
+.about h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.about p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.about__characters {
+    list-style: none;
+    padding: 0;
+}
+
+.about__characters li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.about__characters span {
+    color: #666;
+}
 @media (min-width: 768px) {
 
     .topBar {
@@ -129,4 +260,26 @@ body {
 
         font-size: 1.4rem;
     }
+        .home {
+        padding: 3rem 2rem 6rem;
+    }
+
+    .home__intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .characters__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+
+    .characters__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .character-card__image {
+        height: 16rem;
+    }
+
 }
