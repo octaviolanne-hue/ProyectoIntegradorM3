@@ -1,110 +1,14 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111827;
-    color: white;
-}
-
-/* ========================================
-   TOP BAR
-   ======================================== */
-
-.topBar {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-
-    background-color: #1f2937;
-    border-bottom: 1px solid #374151;
-}
-
-.topBar__brand {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.topBar__logo {
-    width: 2.25rem;
-    height: 2.25rem;
-    object-fit: contain;
-}
-
-.topBar__title {
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-/* ========================================
-   NAVBAR MOBILE + TABLET
-   ======================================== */
-
-.mainNav {
-    position: fixed;
-
-    bottom: 1rem;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: calc(100% - 2rem);
-    max-width: 24rem;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    padding: 0.6rem;
-
-    background: rgba(31, 41, 55, 0.5);
-
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 999px;
-
-    backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.3);
-
-    z-index: 100;
-}
-
-.mainNav__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 0.15rem;
-
-    min-width: 4rem;
-
-    padding: 0.5rem 0.75rem;
-
-    color: #9ca3af;
-
-    text-decoration: none;
-
-    border-radius: 999px;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.mainNav__icon {
-    font-size: 1.2rem;
-}
-
-.mainNav__link:hover {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #111827;
+  color: white;
+  padding-bottom: 6rem;
 }
 
 /* ========================================
@@ -112,114 +16,188 @@ body {
    ======================================== */
 
 .home {
-    width: 100%;
-    max-width: 70rem;
-
-    margin: 0 auto;
-
-    /*
-     * Dejamos espacio inferior para que
-     * la navbar fija no tape el contenido.
-     */
-    padding: 2rem 1rem 7rem;
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 7rem;
 }
 
+/* ========================================
+   TOP BAR
+   ======================================== */
+
+.topBar {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #1f2937;
+  border-bottom: 1px solid #374151;
+}
+
+.topBar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.topBar__logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+}
+
+.topBar__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ========================================
+   NAVEGACIÓN
+   ======================================== */
+
+.mainNav {
+  position: fixed;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 2rem);
+  max-width: 24rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0.6rem;
+
+  background: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+  z-index: 100;
+}
+
+.mainNav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+
+  min-width: 4rem;
+  padding: 0.5rem 0.75rem;
+
+  color: #9ca3af;
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mainNav__icon {
+  font-size: 1.2rem;
+}
+
+.mainNav__link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   INTRO HOME
+   ======================================== */
+
 .home__intro {
-    text-align: center;
-
-    max-width: 38rem;
-
-    margin: 0 auto 2.5rem;
+  text-align: center;
+  max-width: 38rem;
+  margin: 0 auto 2.5rem;
 }
 
 .home__eyebrow {
-    margin-bottom: 0.5rem;
-
-    font-size: 0.75rem;
-    font-weight: 700;
-
-    letter-spacing: 0.15rem;
-
-    opacity: 0.6;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  opacity: 0.6;
 }
 
 .home__intro h2 {
-    margin-bottom: 0.75rem;
-
-    font-size: 2rem;
-    line-height: 1.1;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  line-height: 1.1;
 }
 
 .home__description {
-    color: #6b7280;
+  color: #6b7280;
 }
 
-.characters__title {
-    margin-bottom: 1rem;
+/* ========================================
+   PERSONAJES
+   ======================================== */
 
-    font-size: 1.25rem;
+.characters__title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .characters__grid {
-    display: grid;
-    gap: 1.25rem;
+  display: grid;
+  gap: 1.25rem;
 }
 
 .character-card__image {
-    height: 14rem;
-    overflow: hidden;
+  height: 14rem;
+  overflow: hidden;
 }
 
 .character-card__image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .character-card__content {
-    padding: 1.25rem;
+  padding: 1.25rem;
 }
 
 .character-card__content h4 {
-    margin-bottom: 0.5rem;
-
-    font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .character-card__content p {
-    margin-bottom: 1rem;
-
-    color: #6b7280;
+  margin-bottom: 1rem;
+  color: #6b7280;
 }
 
 .character-card__button {
-    display: inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  padding: 0.7rem 1rem;
 
-    width: 100%;
+  background-color: #111827;
+  color: white;
 
-    padding: 0.7rem 1rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
 
-    background-color: #111827;
-
-    color: white;
-
-    border-radius: 0.75rem;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .character-card__button:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* ========================================
@@ -227,40 +205,37 @@ body {
    ======================================== */
 
 .about {
-    max-width: 40rem;
-
-    margin: 0 auto;
-
-    padding: 2rem 1rem 7rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 7rem;
 }
 
 .about h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about h3 {
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .about p {
-    color: #9ca3af;
-    line-height: 1.6;
+  color: #666;
+  line-height: 1.6;
 }
 
 .about__characters {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .about__characters li {
-    padding: 0.75rem 0;
-
-    border-bottom: 1px solid #374151;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .about__characters span {
-    color: #9ca3af;
+  color: #666;
 }
 
 /* ========================================
@@ -268,26 +243,19 @@ body {
    ======================================== */
 
 .chatApp {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    /*
-     * Dejamos espacio suficiente para la
-     * navbar fija inferior.
-     */
-    height: calc(100vh - 190px);
+  height: calc(100dvh - 180px);
+  max-width: 900px;
 
-    max-width: 900px;
+  margin: 0 auto;
 
-    margin: 0 auto;
+  background-color: #1f2937;
+  border-radius: 0.75rem;
+  overflow: hidden;
 
-    background-color: #1f2937;
-
-    border-radius: 0.75rem;
-
-    overflow: hidden;
-
-    border: 1px solid #374151;
+  border: 1px solid #374151;
 }
 
 /* ========================================
@@ -295,60 +263,52 @@ body {
    ======================================== */
 
 .chatHeader {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 
-    gap: 0.75rem;
+  padding: 0.75rem 1rem;
 
-    padding: 0.75rem 1rem;
+  background-color: #1f2937;
+  border-bottom: 1px solid #374151;
 
-    background-color: #1f2937;
-
-    border-bottom: 1px solid #374151;
-
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .chatHeader__avatar {
-    width: 3rem;
-    height: 3rem;
+  width: 3rem;
+  height: 3rem;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
 
-    overflow: hidden;
-
-    border: 2px solid #4b5563;
+  border: 2px solid #4b5563;
 }
 
 .chatHeader__avatar img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .chatHeader__info {
-    display: flex;
-    flex-direction: column;
-
-    gap: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .chatHeader__name {
-    margin: 0;
-
-    color: #f9fafb;
-
-    font-size: 1rem;
-    font-weight: 600;
+  margin: 0;
+  color: #f9fafb;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .chatHeader__status {
-    color: #9ca3af;
-
-    font-size: 0.8rem;
+  color: #9ca3af;
+  font-size: 0.8rem;
 }
 
 /* ========================================
@@ -356,50 +316,53 @@ body {
    ======================================== */
 
 .chatMessages {
-    flex: 1;
+  flex: 1;
 
-    padding: 1rem;
+  padding: 1rem;
 
-    overflow-y: auto;
+  overflow-y: auto;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-    gap: 0.5rem;
-
-    background-color: #111827;
+  background-color: #111827;
 }
+
+/* Mensaje general */
 
 .message {
-    max-width: 75%;
+  max-width: 75%;
+  padding: 0.65rem 0.8rem;
 
-    padding: 0.65rem 0.8rem;
+  border-radius: 0.75rem;
 
-    border-radius: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 
-    font-size: 0.95rem;
+  overflow-wrap: break-word;
 
-    line-height: 1.4;
-
-    overflow-wrap: break-word;
-
-    color: #f9fafb;
+  color: #f9fafb;
 }
+
+/* Mensaje del personaje */
 
 .message--character {
-    align-self: flex-start;
+  align-self: flex-start;
 
-    background-color: #374151;
+  background-color: #374151;
 
-    border-top-left-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
 }
 
+/* Mensaje del usuario */
+
 .message--user {
-    align-self: flex-end;
+  align-self: flex-end;
 
-    background-color: #2563eb;
+  background-color: #2563eb;
 
-    border-top-right-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
 }
 
 /* ========================================
@@ -407,11 +370,9 @@ body {
    ======================================== */
 
 .message--typing {
-    color: #d1d5db;
-
-    font-style: italic;
-
-    background-color: #374151;
+  color: #d1d5db;
+  font-style: italic;
+  background-color: #374151;
 }
 
 /* ========================================
@@ -419,31 +380,28 @@ body {
    ======================================== */
 
 .message--error {
-    align-self: center;
+  align-self: center;
 
-    max-width: 90%;
+  max-width: 90%;
 
-    background-color: #7f1d1d;
+  background-color: #7f1d1d;
+  color: #fef2f2;
 
-    color: #fef2f2;
-
-    text-align: center;
+  text-align: center;
 }
 
 .message__retry {
-    margin-left: 0.5rem;
+  margin-left: 0.5rem;
 
-    padding: 0.35rem 0.65rem;
+  padding: 0.35rem 0.65rem;
 
-    border: 0;
+  border: 0;
+  border-radius: 0.4rem;
 
-    border-radius: 0.4rem;
+  background-color: #22c55e;
+  color: white;
 
-    background-color: #22c55e;
-
-    color: white;
-
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* ========================================
@@ -451,46 +409,41 @@ body {
    ======================================== */
 
 .chatComposer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
-    gap: 0.5rem;
+  padding: 0.75rem 1rem;
 
-    padding: 0.75rem 1rem;
+  background-color: #1f2937;
+  border-top: 1px solid #374151;
 
-    background-color: #1f2937;
-
-    border-top: 1px solid #374151;
-
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .chatComposer__input {
-    flex: 1;
+  flex: 1;
+  min-width: 0;
 
-    min-width: 0;
+  padding: 0.7rem 1rem;
 
-    padding: 0.7rem 1rem;
+  background-color: #374151;
+  color: #f9fafb;
 
-    background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 1.5rem;
 
-    color: #f9fafb;
+  font-size: 0.95rem;
 
-    border: 1px solid #4b5563;
-
-    border-radius: 1.5rem;
-
-    font-size: 0.95rem;
-
-    outline: none;
+  outline: none;
 }
 
 .chatComposer__input::placeholder {
-    color: #9ca3af;
+  color: #9ca3af;
 }
 
 .chatComposer__input:focus {
-    border-color: #60a5fa;
+  border-color: #60a5fa;
 }
 
 /* ========================================
@@ -498,191 +451,156 @@ body {
    ======================================== */
 
 .chatComposer__send {
-    width: 2.75rem;
-    height: 2.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 0;
+  padding: 0;
 
-    border: 0;
+  border: 0;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
 
-    background-color: #2563eb;
+  font-size: 1.1rem;
 
-    color: white;
-
-    font-size: 1.1rem;
-
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .chatComposer__send:hover {
-    background-color: #3b82f6;
+  background-color: #3b82f6;
 }
 
 .chatComposer__send:disabled {
-    opacity: 0.5;
-
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* ========================================
    TABLET
-   768px+
    ======================================== */
 
 @media (min-width: 768px) {
+  .topBar {
+    height: 4.5rem;
+    padding: 0 2rem;
+  }
 
-    .topBar {
-        height: 4.5rem;
+  .topBar__logo {
+    width: 3rem;
+    height: 3rem;
+  }
 
-        padding: 0 2rem;
-    }
+  .topBar__title {
+    font-size: 1.2rem;
+  }
 
-    .topBar__logo {
-        width: 3rem;
-        height: 3rem;
-    }
+  .mainNav {
+    width: min(90%, 30rem);
+    padding: 0.75rem;
+  }
 
-    .topBar__title {
-        font-size: 1.2rem;
-    }
+  .mainNav__link {
+    min-width: 5rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
 
-    /*
-     * La navbar sigue siendo inferior.
-     * Solo la hacemos un poco más grande.
-     */
+  .mainNav__icon {
+    font-size: 1.4rem;
+  }
 
-    .mainNav {
-        width: min(90%, 30rem);
+  .home {
+    padding: 3rem 2rem 6rem;
+  }
 
-        padding: 0.75rem;
-    }
+  .home__intro h2 {
+    font-size: 2.5rem;
+  }
 
-    .mainNav__link {
-        min-width: 5rem;
+  .characters__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-        padding: 0.6rem 1rem;
+  .chatApp {
+    height: calc(100vh - 180px);
+    margin-top: 1.5rem;
+  }
 
-        font-size: 0.9rem;
-    }
+  .chatHeader {
+    padding: 0.85rem 1.25rem;
+  }
 
-    .mainNav__icon {
-        font-size: 1.4rem;
-    }
+  .chatMessages {
+    padding: 1.5rem;
+  }
 
-    .home {
-        padding: 3rem 2rem 7rem;
-    }
-
-    .home__intro h2 {
-        font-size: 2.5rem;
-    }
-
-    .characters__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /*
-     * Un poco más de espacio para que
-     * la navbar no tape el composer.
-     */
-
-    .chatApp {
-        height: calc(100vh - 200px);
-
-        margin-top: 1.5rem;
-    }
-
-    .chatHeader {
-        padding: 0.85rem 1.25rem;
-    }
-
-    .chatMessages {
-        padding: 1.5rem;
-    }
-
-    .chatComposer {
-        padding: 0.85rem 1.25rem;
-    }
+  .chatComposer {
+    padding: 0.85rem 1.25rem;
+  }
 }
 
 /* ========================================
-   PC
-   1200px+
+   DESKTOP
    ======================================== */
 
 @media (min-width: 1200px) {
+  /* NAVBAR PC */
 
-    /*
-     * En PC la navbar deja de ser flotante
-     * y pasa a estar debajo del topBar.
-     */
+  .mainNav {
+    position: static;
+    transform: none;
 
-    .mainNav {
-        position: static;
+    width: 100%;
+    max-width: none;
 
-        transform: none;
+    padding: 0.5rem;
 
-        width: 100%;
-        max-width: none;
+    background-color: #1f2937;
 
-        padding: 0.5rem;
+    border: 0;
+    border-bottom: 1px solid #374151;
+    border-radius: 0;
 
-        background-color: #1f2937;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
 
-        border: 0;
+  .mainNav__link {
+    flex-direction: row;
 
-        border-bottom: 1px solid #374151;
+    min-width: auto;
+    padding: 0.5rem 1rem;
 
-        border-radius: 0;
+    border-radius: 0.5rem;
 
-        backdrop-filter: none;
+    gap: 0.4rem;
+  }
 
-        box-shadow: none;
-    }
+  .mainNav__icon {
+    font-size: 1.1rem;
+  }
 
-    .mainNav__link {
-        flex-direction: row;
+  /* HOME PC */
 
-        min-width: auto;
+  .characters__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-        padding: 0.5rem 1rem;
+  .character-card__image {
+    height: 16rem;
+  }
 
-        border-radius: 0.5rem;
+  /* CHAT PC */
 
-        gap: 0.4rem;
-    }
-
-    .mainNav__icon {
-        font-size: 1.1rem;
-    }
-
-    /*
-     * HOME PC
-     */
-
-    .characters__grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .character-card__image {
-        height: 16rem;
-    }
-
-    /*
-     * CHAT PC
-     */
-
-    .chatApp {
-        height: calc(100vh - 150px);
-
-        margin: 1.5rem auto 0;
-    }
+  .chatApp {
+    height: calc(100vh - 150px);
+    margin: 1.5rem auto 0;
+  }
 }
