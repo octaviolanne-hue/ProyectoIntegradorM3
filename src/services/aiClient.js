@@ -8,7 +8,7 @@ import {
     buildPayload,
     normalizeAIResponse,
     getTrimmedHistory
-} from "../transform/chatPayloead.js";
+} from "../transform/chatPayload.js";
 
 import { fetchJson } from "./fetchJson.js";
 
