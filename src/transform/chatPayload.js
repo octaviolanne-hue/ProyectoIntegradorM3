@@ -26,6 +26,9 @@ export function buildPayload({ systemPrompt, uiMessages }) {
 
 export function normalizeAIResponse(raw) {
     const parts = raw?.candidates?.[0]?.content?.parts;
+
+    if (!Array.isArray(parts)) return "";
+
     return parts
         .filter((p) => p && typeof p.text === "string")
         .map((p) => p.text)

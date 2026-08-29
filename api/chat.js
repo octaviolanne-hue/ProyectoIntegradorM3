@@ -26,12 +26,15 @@ export default async function handler(req, res) {
     return res.status(200).json(result.response);
 
     }catch (error){
-        if (error.status === 429){
-            console.warn("Rate limit exceeded");
-            return res.status(429).json({
-                error: "Rate limit exceeded",
-                retryAfterSeconds: RETY_AFTER_FALLBACK_SECONDS,
-            })
+        if (error.status === 429) {
+        console.error("🚨 GEMINI 429");
+        console.error(error);
+
+        return res.status(429).json({
+            error: "Rate limit exceeded",
+            retryAfterSeconds: RETY_AFTER_FALLBACK_SECONDS,
+            details: error.message,
+        });
         }
         console.error("Error in /api/chat:", error)
         return res.status(500).json({ error: "Internal server error"});
