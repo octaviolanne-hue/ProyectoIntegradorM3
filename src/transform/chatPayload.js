@@ -7,7 +7,8 @@ export function toApiMessages(uiMessages) {
     return uiMessages.map((msg) => ({
         role: msg.role === "character" ? "model" : "user",
         parts: [{ text: msg.text }],
-    }));
+    }
+));
 }
 
 export function buildPayload({ systemPrompt, uiMessages }) {
@@ -39,7 +40,6 @@ export function normalizeAIResponse(raw) {
 export function appendUserMessage(messages, text) {
     return [...messages, { role: "user", text }];
 }
-
 export function appendAssistantMessage(messages, text) {
     return [...messages, { role: "character", text }];
 }
