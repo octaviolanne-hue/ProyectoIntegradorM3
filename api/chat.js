@@ -27,8 +27,6 @@ export default async function handler(req, res) {
 
     }catch (error){
         if (error.status === 429) {
-        console.error("🚨 GEMINI 429");
-        console.error(error);
 
         return res.status(429).json({
             error: "Rate limit exceeded",
