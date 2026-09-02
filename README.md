@@ -23,9 +23,10 @@ El personaje seleccionado determina el prompt utilizado para mantener su persona
 Clonar el repositorio:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
-cd character-chat
+git clone https://github.com/octaviolanne-hue/ProyectoIntegradorM3.git
+cd ProyectoIntegradorM3
 npm install
+vercel dev
 ```
 
 Configurar la variable de entorno necesaria:
